@@ -1,0 +1,56 @@
+How to make the delete function: 
+void deleteNode(int key, TreeNode *start){
+	// 1. Find it 
+	// fast: this finds the value 
+	// slow: the parent of this value 
+	// when fast finds the value 
+	// figure out the 'type' of delete 
+
+//CASE I: has no child
+
+	if(fast->left == NULL && fast->right == NULL){
+	//before you delete fast you have to determine which thing you are deleting
+	if(slow->left == fast){
+	delete fast;  //is the child to the left? 
+	slow->left = NULL;
+	}
+	else{ //or is it to the right? 
+	delete fast; 
+	slow->right = NULL; 
+	}
+}
+
+//CASE II: has one child 
+
+else if((fast->left == NULL && fast->right != NULL)||(fast->left != NULL && fast->right = NULL)){
+	// see if fast is to the right of slow 
+	if(slow->right == fast){                  slow(29)-(30)fast
+		if(fast->right !=NULL){
+			
+		}
+		else{
+
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

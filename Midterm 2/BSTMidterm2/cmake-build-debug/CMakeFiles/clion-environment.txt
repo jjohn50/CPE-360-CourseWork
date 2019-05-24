@@ -1,0 +1,4 @@
+ToolSet: w64 7.0 (local)@C:\Users\justi\Desktop\Programs for CPE 390\msys64\mingw64
+Options: 
+
+Options:

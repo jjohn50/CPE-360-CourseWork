@@ -1,0 +1,92 @@
+Sorting Order: 
+Worst: Polynomial O(N^2)
+Best: O(NlogN)
+Example:
+5, 23, 1, 4, 7 (Don't every use this for large numbers)
+
+Bubble Sort (Worst due to N^#) 
+Goes there the input and tries to find the highest number. That number is placed to the end. 
+It takes around N-1 moves to finish this process 
+
+Pass 1: Compare 5 and 23. This is fine since 5 < 23. 5, 23, 1, 4, 7
+Compare 23 and 1. 1 is less than 23, so they swap places. 5,1,23,4,7
+Compare 23 and 4. 23 is greater than 4, so they swap places. 5,1,23
+Compare 23 and 7. 23 is greater than 7, so they swap places. 
+Pass 2: 
+
+ 
+
+Application: 
+Just check if a set is correctly ordered
+
+Greedy: brute force and example (Bubble Sort)
+Divide and Conquer: Divide the sort and 
+
+Step 1: 
+Divide and Conquer 
+Step 2: 
+Merging
+
+The idea of divide and conquer: 
+Ex: 23, 0, 1, 7, 2, 99, 36, 8 
+
+Merge Sort (NlogN): (safe answers when asked what you want to deal with million numbers) 
+(I):
+Step 1: Divide. Slash the set into two different sets. 
+Step 2: Divide. Slash the set into four sets
+Step 3: Divide. Slash the set into individual sets. (Divide is done) 
+(II):
+Step 4: Conquer: Take the individual sets and compare one set to another. 
+Step 5: Put the number that less than other set as the first number in a new set
+Step 6: Put index 0 and compare it to index at 1. (0) Then compare the index 23 and index 1. (1) After that compare 23 and 7. 
+(0,1,7,23)
+Do the same steps process for the other indivdual and then compare then by comparing all the numbers. 
+
+The sort should look something like this: 0,1,2,7,8,23,36,99 
+
+
+Quicksort (Best case NlogN and it worst case it can be N^#): randomly pick a piviot element from the set. Compare every number with the pivot. If it less than it make small set and if its bigger it will make a big set. Exam 
+
+(I)
+15,1,23,7,0,99,6
+Divide: 
+1) Randomly pick a piviot element from the set. Compare every number with the pivot. 
+If it less than it make small set and if its bigger it will make a big set. 
+2) A pivot element will be choosen and within the subarray it will make small and big set.
+3) "less + pivot + more"
+4) Once there are individual sets and write "less + pivot + more"
+5) On the left hand side will yield 0,1,6 and the right hand side will yield 15,23,99
+
+The sort will look something like this: 
+
+The sort should look something like this: 0,1,6,7,15,23,99 
+
+
+Heap Sort (Always NlogN): on the exam 
+1) Binary Tree or 
+2) Balanced: A tree is balanced if nodes from 0 -> (D-2) have two children. D = number from top node to last node 
+3) Left justified: all leaf nodes are as far left as possible 
+4) "Heap Property": max(parent > both children). If does not happen you do sift up the biggest number and sift down the root 
+
+(I)
+Divide
+Ex: 17,23,85,36,11,49,512,7 
+(One level at a time Left to Right)
+
+1) Create a Binary Tree with the number given 
+	a) The structure is something like this: 512,36, 17, 11, 7, 85, 23,49 
+2) Delete the Root and then use the smallest number as the replacement root and follow the heap property
+
+
+Final Order: 512, 85, 49, 36, 23, 17, 11, 7 
+This is what the CPU does to decided what operation should occur at a certain time 
+
+Min Heap: 
+
+Don't use this if memory is a problem. 
+
+Next Class: Hash Tables
+
+
+
+

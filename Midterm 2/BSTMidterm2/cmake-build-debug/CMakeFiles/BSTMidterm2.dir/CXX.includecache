@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/justi/Desktop/Midterm 2/BSTMidterm2/main.cpp
+iostream
+-
+cmath
+-
+stdio.h
+-
+stdlib.h
+-
+

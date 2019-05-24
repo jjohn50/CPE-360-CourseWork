@@ -1,0 +1,105 @@
+Exam out of 100% 
+40% of the exam question come from the lecture 
+Have to do a least one of those problems and the rest can be taken home:
+*A: ~10-20 lines of code (20%)
+*B: ~10-20 lines of code (20%)
+*C: ~10-20 lines of code (20%)
+If you do all of them and get a 90 above: 10 bonus points and lunch 
+What you are allowed to bring: 
+	One cheat sheet 
+	Print your code (optional)
+	Not allowed to use the internet
+
+Topics: 
+Why go into the heap? (check)
+	Why can't we do it in the array? (check)
+Big O + 0 notations (check) 
+	Given a formula and they ask for what is Big O 
+	f(n)=3n^2+4n+9 = O(?)
+Recursion:
+	Simple function  
+Infix ---> Postfix:
+	Moderate equation 
+(40% of the exam)
+
+All * problems:
+Stacks: 
+	Add, Delete, Display, and Something new (function) 
+	Assume that main is present and just write 
+	Recommends to write a diagram to explain it for the TA and the prof
+Queues:
+	Add, Delete, Display, and Something new (function) 
+	Assume that main is present and just write 
+	Recommends to write a diagram to explain it for the TA and the prof
+Linkedlist:
+	Add, Delete, Display, and Something new (function) 
+	Assume that main is present and just write 
+	Recommends to write a diagram to explain it for the TA and the prof
+
+If you take it home: 
+	You must integreted into code 
+
+
+Best way to study for *:
+	"Stack, Queues, and Linkedlist interview question"
+
+Proving Big O: 
+
+f(n)=3n^2+4n+9 = 0(?)
+Big O = O(n^2)
+f(n)=O(g(n))
+g(n) something similar to f(n)
+f(n)<=C*g(n)
+Make an educated guess: 
+g(n)=n^2 
+f(n)<=Cn^2
+Need to pick a C bigger than what in front of the big O:
+f(n)<=4n^2
+Need to figure out Vn>N0
+
+3n^2+4n+9<4n^2 (need to make this statement correct) 
+n !=1
+n=4
+Vn>4; 
+
+Recursion: 
+Fibo Sequence
+Factorial 
+
+Look up Recursion interview questions 
+
+Interview: 
+They will just look at Google for interview questions 
+Higher up 
+Take a small part of their project 
+
+Infix -----> Postfix: 
+a*b^c+e
+
+Symbol			Stack			postfix
+a----------------_---------------a
+*---------------*----------------a
+b---------------*----------------ab
+^---------------^/*---------------ab
+c---------------*-----------------abc^
++---------------*------------------abc^*
+e---------------------------------abc^*e+
+
+Couple of Linked List and combine them 
+
+
+
+
+Nested For Loop: 
+for(int i =1; i<10; i++){
+	for(int j =i; j<5; j*=2){
+		x++;  
+	}
+}
+i=1   2 times 
+i=2	  2 times 
+i=3   1 times 
+i=4	  1 times 
+i=5	  stops
+
+Practice by google and writing notes      

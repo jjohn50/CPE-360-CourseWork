@@ -1,0 +1,108 @@
+Nodes no longer point to one thing rather it points to mutiple things
+Understand how one node could point to mutiple nodes 
+
+class Node{
+int value; 
+Node *next; 	 
+
+};
+
+class TreeNode{
+	int value; 
+	TreeNode *left;
+	TreeNode *right; 
+}
+
+People are use to this type of thinking 
+Root node (Thing that starts the process. First node)
+
+It is possible to go back if you make another pointer called back. 
+This would create a bidirectional nodal process
+
+Every nodes have pointers 
+
+Lead nodes: 
+The nodes at the end are called leaf nodes
+These are generally ground 
+
+Internal nodes:
+Are in between Root node and the leaf node
+
+Parent <-> Child 
+"Path to a node": shows the path of the node from node to node
+
+Level:
+Show how many hops from the root
+
+Height (h): 
+h=max(level)
+
+Balanced tree: 
+
+Equal amount of nodes on the left and the right.
+Stand on the root and partion the root node there should be equal amount of nodes on the left and right
+Balanced, but it does not have to have equal amount of node on the left and right
+
+
+Completely Balanced Tree: 
+
+This tree is completely balance because all possiblity for nodes are present. 
+If a node can have other nodes it should have them
+
+=====================================================================================================
+
+log become into being to measure rapid growth 
+
+Popular interview question:
+Pick a number from 1-100
+Given a limited amount of guesss
+
+Fastest way to search for something:
+
+There is data structure that can search stuff in log time
+
+Binary Search Tree (BST): 
+n=2
+
+Teritary Tree: 
+n-ary tree 
+
+best search occur in n/2 time 
+
+
+N |  O(N) | O(log_2_N)|
+10   10			3	
+100  100 		7
+1000  1000		10
+10000 10000		14
+10^6	10^6 	20 
+
+15 17 19 12 1 0 2 23 94 -1 13 11 10 
+
+			15 
+	12				17
+1	    13		16		19
+0 2		11			18		23
+-1		10				21		94
+
+When looking for 18 and this structure guide you to get that number
+32 nodes and the worst case is the height of the tree 
+h = log_2_ N (Will be around this for a balanced tree) 
+
+h ~ log_2_(N)
+
+When adding numbers it the same process as search and then you find a location that close to it and put the new node in 
+
+Adding: O(log_2_N)
+Deleting: O(log_2_N)
+Searching: O(log_2_N)
+
+
+log_2_N = N/2 ≈ 1
+log_2_100 = 100/2 = 50/2 = 25/2 = 12/2 =6/2 = 3/2 ≈ 1 ≈ 5 steps 
+log_2_1000 ≈ 10 steps 
+2^i = N
+N/2^i = 1 
+Keep dividing the number 
+
+Easiest thing to get rid of is the leaf and the hardest is root 

@@ -1,0 +1,3 @@
+C:/Users/justi/Desktop/Midterm 2/BSTMidterm2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/justi/Desktop/Midterm 2/BSTMidterm2/cmake-build-debug/CMakeFiles/BSTMidterm2.dir
+C:/Users/justi/Desktop/Midterm 2/BSTMidterm2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,113 @@
+Core Structure: 
+Should I go left
+
+Root pointer: has access to all the items connected to the root 
+Root is empty: 
+The first number will become the root 
+This number will have two pointers (left and right)
+Everything starts off as a search function 
+When you don't find the node, you add it in 
+
+Make a temp pointer, key 
+Compare the temp->value with the key value 
+After you found the node, you can add that value in
+If you fall off the tree, you 
+
+Sudo code: 
+Search(int key (value to look for), TreeNode *starts){
+	if(key == start->value){
+		cout << "Found it";
+		return; 
+	}
+
+	else{
+		if(key > start->value){
+		search(key,start->right);
+		}
+		else{
+		search(key,start->right);
+		}
+	}
+}
+
+Acutal code: 
+Binary Search Tree:
+#include <iostream>
+using namespace std;
+class TreeNode {
+public:
+    int value;
+    TreeNode *right;
+    TreeNode *left;
+
+    TreeNode{
+        value = 0;
+        right = left = NULL:
+    }
+};
+class BST{
+public: 
+    TreeNode * root;
+    
+    BST(){
+        root = NULL; 
+    }
+    //Functions that a BST must perform 
+    // 1. Search for a value 
+    void searchBST(int key, TreeNode *start) {
+        //check to see if you found it (anchor value)
+        if (start == NULL) {
+            cout << "Could not find it" << endl;
+            return; 
+        }
+        else if(key == start->value){
+            cout << "Found it! " << endl;
+            return; 
+        }
+        else{
+            if(key > start->value){
+                searchBST(key, start->right);
+            }
+            else{
+                searchBST(key, start->left); 
+            }
+        }
+    }
+    // 2. Add new values to the tree 
+    void addNodeBTS(int key){
+        //start by searching for this value
+        //If you find it, don't add it. Just write a comment 
+        //If you don't find it. add it where you should have found it
+        
+    }
+    // 3. Delete values from the tree 
+    // 4. Ways to display the content of the tree
+};
+
+
+No matter what value is given it will be a leaf, unless its the first value in the code 
+When you fall off, you should add that value there. 
+
+void add(int key){
+	// you can't use recursion for this
+	TreeNode *slow, *fast; 
+	slow = fast = root; 
+	// want fast to fall off the tree 
+	while(fast != NULL){
+	if(fast->value == key){
+	cout << "Duplicate" << endl; 
+	}
+	else {
+	if(key > fast->value){
+	slow = fast; 
+	fast = fast->right 
+	}
+	else{
+	slow = fast; 
+	fast = fast->left;   
+	}
+}
+	}
+}
+
+

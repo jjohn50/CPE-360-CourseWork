@@ -1,0 +1,385 @@
+1)
+
+Binary Tree Search is very efficient in term of searching for specific elements and it does not look at all the element like a Linked List. 
+The best case for a BST is O(logn) and its worse case is similar to linkedlist O(N). Unlike arrays, a binary search tree much faster to search for things. 
+The search time for the big O of an array is ususally O(N), but the search for a BST is O(logN)
+
+2) The best case run time for a BST is O(logN) and the worst case is O(N). 
+The performance of a BST-search will degrade once it is unbalanced and the performance is very similar to Linked List (O(N)). 
+For the least number of comparison: log(1,000,000) = 6 comparisons and the worst number of comparison: O(1,000,000)= 1,000,000 comparisons. 
+
+3)Quicksort
+Piviot Element: 7
+
+1st Step: 
+				Partition around 7
+				Small Set: 0, 1, 2, 3, 4, 5, 6   
+				Big Set: 8, 9 
+2nd Step: 
+			Partition around 6 
+			Small Set: 0, 1, 2, 3, 4, 5
+			Partition around 8    
+			Big Set: 9 
+3rd Step: 
+			Partition around 5 
+			Small Set: 0, 1, 2, 3, 4
+4th Step: 
+			Partition around 4
+			Small Set: 0, 1, 2, 3
+5th Step: 
+			Partition around 3 
+			Small Set: 0, 1, 2,
+6th Step: 
+			Partition around 2 
+			Small Set: 0, 1
+7th Step: 
+			Partition around 1 
+			Small Set: 0
+
+8th Step: Recombing the whole things: 0,1,2,3,4,5,6,7,8,9 
+
+
+4) MergeSort: 
+
+1, 4, 7, 6, 3, 5, 0, 2, 9, 8
+
+Step 1: Divide the set in half and create two different sets 
+
+Total Set A: 
+[[1,4,7,6,3]]                 
+
+Step 2: Divide the set again by 2 
+[[1,4,7] [6,3]] 
+
+Step 3: Divide all the sets again by 2 
+[[1,4][7][6][3]]
+
+Step 4: Divide the sets again by 2
+[[1][4][7][6][3]]
+
+Step 5: Compare the left most number with the number next to it and see which one is smaller. 
+The smallest number go first and the biggest number goes last. Form a new set with those number. 
+[1,4][6,7][3]
+
+Step 6: Compare the left most number with the number next to it and see which one is smaller. 
+The smallest number go first and the biggest number goes last. Form a new set with those number. 
+[[1,4][3,6,7]]
+
+Step 7: Compare the left most number with the number next to it and see which one is smaller. 
+The smallest number go first and the biggest number goes last. Form a new set with those number. 
+[[1,3,4,6,7]]
+
+Step 8: Other Original Set and it division
+[5,0,2,9,8]
+[[5,0][2,9,8]
+
+Step 9: Divide the set again by 2
+[[5,0][2,9,8]
+[[5],[0],[2,9],[8]]
+
+Step 10: Divide the set again by 2
+[[5],[0],[2], [9],[8]]
+
+Step 11: Compare the left most number with the number next to it and see which one is smaller. 
+The smallest number go first and the biggest number goes last. Form a new set with those number
+
+[[0,5],[2,9], [8]]
+
+Step 12: Compare the left most number with the number next to it and see which one is smaller. 
+The smallest number go first and the biggest number goes last. Form a new set with those number
+
+[[0,5],[2,8,9]]
+
+Step 13: Compare the left most number with the number next to it and see which one is smaller. 
+The smallest number go first and the biggest number goes last. Form a new set with those number
+[[0,2,5,8,9]]
+
+Step 14 Combine the left and right set: 
+[0,1,2,3,4,5,6,7,8,9]
+
+
+5) 
+
+a) Sepearate Chainning: A scheme in which each position in the hash table has a list to handle collisions. 
+Each position may be just a link to the list (direct chaining) or may be an item and a link, 
+essentially, the head of a list.
+
+N=10 
+Input: 31,22, 94, 452, 42, 193, 64, 35, 226.
+Key: index = key%10
+
+31%10 = 1 (position) 
+22%10 = 2 (position) 
+94%10 = 4 (position) 
+452%10 = 2 (position)
+42%10 = 2 (position) 
+193%10 = 3 (position)
+64%10 = 4 (position)
+35%10 = 5 (position)
+226%10 = 6 (position) 
+
+
+
+0   -      -
+1   -      31
+2   -      22 -> 452 -> 42
+3   -      193
+4   -      94 -> 64
+5   -      35
+6   -      226
+7   -      -
+8   -      -
+9   -      -
+
+b) Linear Probing: scheme in computer programming for resolving collisions in hash tables, 
+data structures for maintaining a collection of key–value pairs and 
+looking up the value associated with a given key. 
+Along with quadratic probing and double hashing, linear probing is a form of open addressing.
+
+31%10 = 1 (position) 
+22%10 = 2 (position) 
+94%10 = 4 (position) 
+452%10 = 2 is taken so it goes to 3 (position)
+42%10 = 2 is taken so it goes to 5 (position) 
+193%10 = 3 is taken so it goes to 6 (position)
+64%10 = 4 is taken so it goes to 7 (position)
+35%10 = 5 is taken so it goes to 8 (position)
+226%10 = 6 is taken so it goes to 9 (position) 
+
+0   -      -
+1   -      31
+2   -      22
+3   -      452
+4   -      94
+5   -      42
+6   -      193
+7   -      64
+8   -      35
+9   -      226
+
+6) Heap Sort Data Structure 
+
+#include <iostream>
+#include <cstdlib>
+#include <vector>
+#include <iterator>
+using namespace std;
+class Heap
+{
+private:
+
+    vector <int> heap;
+
+    int left(int p1);
+
+    int right(int p2);
+
+    int parent(int c1);
+
+    void heapup(int index);
+
+    void heapdown(int index);
+public:
+
+    Heap()
+    {}
+    void Insert(int number);
+    void DeleteMin();
+    int ExtractMin();
+    void DisplayHeap();
+    int Size();
+};
+/*
+* Return Heap Size
+*/
+int Heap:: Size()
+{
+    return heap.size();
+}
+
+/*
+* Insert Element into a Heap
+*/
+void Heap::Insert(int number)
+{
+    heap.push_back(number);
+    heapup(heap.size() -1);
+}
+/*
+* Delete Minimum Element
+*/
+void Heap::DeleteMin()
+{
+    if (heap.size() == 0)
+    {
+        cout<<"Heap is Empty"<<endl;
+        return;
+    }
+    heap[0] = heap.at(heap.size() - 1);
+    heap.pop_back();
+    heapdown(0);
+    cout<<"Element is Deleted"<<endl;
+}
+
+/*
+* Extract Minimum Element
+*/
+int Heap::ExtractMin()
+{
+    if (heap.size() == 0)
+    {
+        return -1;
+    }
+    else
+        return heap.front();
+}
+
+/*
+* Display Heap
+*/
+void Heap::DisplayHeap()
+{
+    vector <int>::iterator
+    position = heap.begin();
+    cout<<"Heap --> ";
+    while (position != heap.end())
+    {
+        cout<<*position<<" ";
+        position++;
+    }
+    cout<<endl;
+}
+
+/*
+* Return Left Child
+*/
+int Heap::left(int p1)
+{
+    int l = 2 * p1 + 1;
+    if (l < heap.size())
+        return l;
+    else
+        return -1;
+}
+
+/*
+* Return Right Child
+*/
+int Heap::right(int p2)
+{
+    int r = 2 * p2 + 2;
+    if (r < heap.size())
+        return r;
+    else
+        return -1;
+}
+
+/*
+* Return Parent
+*/
+int Heap::parent(int c1)
+{
+    int np = (c1 - 1)/2;
+    if (c1 == 0)
+        return -1;
+    else
+        return np;
+}
+
+void Heap::heapup(int up)
+{
+    if (up >= 0 && parent(up) >= 0 && heap[parent(up)] > heap[up])
+    {
+        int temp = heap[up];
+        heap[up] = heap[parent(up)];
+        heap[parent(up)] = temp;
+        heapup(parent(up));
+    }
+}
+
+
+void Heap::heapdown(int down)
+{
+    int kid = left(down);
+    int kid1 = right(down);
+    if (kid >= 0 && kid1 >= 0 && heap[kid] > heap[kid1])
+    {
+        kid = kid1;
+    }
+    if (kid > 0)
+    {
+        int temp = heap[down];
+        heap[down] = heap[kid];
+        heap[kid] = temp;
+        heapdown(kid);
+    }
+}
+
+//This allows you insert the 6, 15 ,3, 21, 8, 17, 2, 14, 9 and delete 3 or more numbers
+int main()
+{
+    Heap heap;
+    int choice, number;
+    while (1)
+    {
+        cout<<"Please select one of the follow operations "<< endl;
+        cout<<"1 Insert Element"<< endl;
+        cout<<"2 Delete Minimum Element"<< endl;
+        cout<<"3 Extract Minimum Element"<< endl;
+        cout<<"4 Print Heap"<< endl;
+        cout<<"5 Exit"<< endl;
+        cout<<"Enter your choice: ";
+        cin>>choice;
+        switch(choice)
+        {
+            case 1:
+                cout<<"Enter the number to be inserted: ";
+                cin>>number;
+                heap.Insert(number);
+                break;
+            case 2:
+                heap.DeleteMin();
+                cout << "The smallest number has been deleted" << endl;
+                break;
+            case 3:
+                cout<<"Smallest Number: ";
+                if (heap.ExtractMin() == -1)
+                {
+                    cout<<"Heap is Empty"<<endl;
+                }
+                else
+                    cout<<"Smallest Number: "<<heap.ExtractMin()<<endl;
+                break;
+            case 4:
+                cout<<"Displaying the numbers of the Heap: ";
+                heap.DisplayHeap();
+                break;
+            case 5:
+                exit(1);
+            default:
+                cout<<"Please enter a "<<endl;
+                break;
+        }
+    }
+}
+
+Displaying the numbers of the Heap before the deletion: Heap --> 2 8 3 9 15 17 6 21 14
+
+Display after three deletion: Heap --> 8 9 14 21 15 17
+
+    
+7)
+Pre-order: ABDGHECFIJ
+
+Post-order: GHDEBIJFCA
+
+In-order: GDHBEACIFJ
+
+8-10) 
+Look at the other file that is attached 
+
+
+
+
+ 
+

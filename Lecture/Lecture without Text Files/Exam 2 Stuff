@@ -1,0 +1,97 @@
+Exam 1 Material will not appear
+
+Trees:
+a) Basic def: leafs, trees, nodes, and so on 
+b)BST
+c) Searching 
+	1) BST
+	2) Hash Tables
+		a) Duplication 
+		b) Separate chains 
+		c) Linear Probing 
+		d) Quad Probing 
+d) Sorting:
+	1) Bubble: N^2 
+	2) Merge: Nlogn
+	3) Quick: nlogn or n^2  
+	4) Heap Sort: nlogn  
+
+The "Star Function": (60%) Must do them all 
+Ask to see if you tree is self checking 
+
+General Code: (40%)
+Ask what pre,post, infix order are 
+Give a bunch of numbers and ask what it would look like in different sorting techniques 
+
+
+
+Example: 
+
+Quad probing: (Go i^2 slots away, i = iteration #)
+
+Hash Table of Size 10 (Start from 0-9)
+
+1934 % 10 = goes to section 4 
+9947 % 10 = goes to section 7 
+9834 % 10 = wants to go to section 4, but it can't so you use i =1, i^2 =1 so it goes to section 5
+1927 % 10 = wants to go to section 7, but it can't so it i^2=1 so it goes to section 8 
+8434 % 10 = wants to go to section 4, but it can't section 4, so use table below and it goes to section 3 
+
+i 	i^2 
+1	1		
+2	4
+3	9
+
+
+Example: 
+
+Heap Sort: 
+Go one level at a time and replace 
+
+When you delete go from highest to lowest 
+And 
+
+Binary Tree: Left justified and balanced
+9, 17 0, 99, 3, 2, 12, 1 
+
+Create a binary Tree 
+
+9
+
+17 
+
+swap places if lead > root 
+17 
+9	0
+99
+
+swap places 
+
+99
+17	0
+9 3  2
+
+swap places 
+
+99
+17 2
+9 3 0 
+1
+
+
+Big O(n):
+
+
+Searching: worst to best
+Linear: O(n)
+HT: O(C)
+BST: O(logn) less than 1 million data points 
+
+
+Sorting: worst to best 
+ Bubble: N^2 
+ Merge: Nlogn
+ Quick: nlogn or n^2  
+ Heap Sort: nlogn 
+
+  
