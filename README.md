@@ -1,6 +1,6 @@
 # CPE-360-CourseWork
 
-                                                              Topics that are covered: 
+                                                     Topics that are covered: 
 
 Analysis of Algorithms: 
 
